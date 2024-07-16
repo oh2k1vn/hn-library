@@ -1,0 +1,25 @@
+{
+  "build": "tsc && vite build",
+  // => Xây dựng dist, với các kiểu khai báo, sau khi kiểm tra các loại với TypeScript.
+  "lint": "eslint . --ext ts,tsx",
+  // => Lint dự án với Eslint.
+  "lint:fix": "eslint . --ext ts,tsx --fix",
+  // => Lint và sửa chữa dự án với Eslint.
+  "format": "prettier --check .",
+  // => Kiểm tra định dạng dự án với Đẹp hơn.
+  "format:fix": "prettier --write .",
+  // => Định dạng mã dự án với Đẹp hơn.
+  "stylelint": "stylelint **/*.css",
+  // => Lint mã kiểu với Phong cách.
+  "stylelint:fix": "stylelint **/*.css --fix",
+  // => Lint và sửa mã kiểu với Phong cách.
+  "storybook": "storybook dev -p 6006",
+  // => Bắt đầu một máy chủ phát triển Storybook.
+  "build-storybook": "storybook build",
+  // => Xây dựng truyện dist.
+  "test": "vitest --ui",
+  // => Chạy các bài kiểm tra với Nhất sử dụng jsdom và bắt đầu một UI tĩnh máy chủ dev.
+  "coverage": "vitest run --coverage",
+  // => 	Tạo một báo cáo bảo hiểm, với v8.
+  "prepublishOnly": "vitest run && npm run build"
+}
